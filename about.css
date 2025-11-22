@@ -213,3 +213,13 @@ footer {
     display: none;
   }
 }
+
+.button-span {
+  display: none !important; /* hide always by default */
+}
+
+@media (max-width: 768px) {
+  .button-span {
+    display: block !important; /* show only on small screens */
+  }
+}
