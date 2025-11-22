@@ -174,3 +174,40 @@ footer {
   color: white;
 }
 
+/* Hide button-span by default */
+.button-span {
+  display: none; /* hidden on large screens */
+}
+
+/* Show button-span only on small screens */
+@media (max-width: 768px) {
+  .button-span {
+    display: block; /* show on mobile */
+  }
+
+  .menu-icon {
+    display: flex; /* show menu icon on mobile */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #004aad;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    display: none; /* hide menu by default on mobile */
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex; /* show menu when toggled */
+  }
+}
+
+/* Ensure menu-icon stays hidden on large screens */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
