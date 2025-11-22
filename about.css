@@ -170,7 +170,7 @@ footer {
 }
 
 .menu-icon {
-  display: flex;
+  display: nonoe;
   font-size: 28px;
   cursor: pointer;
   color: white;
@@ -223,3 +223,4 @@ footer {
     display: block !important; /* show only on small screens */
   }
 }
+
