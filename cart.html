@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartMart | Cart</title>
+  <link rel="icon" type="image/pgn" href="./smartmart.png">
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">SmartMart</div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listing.html">Products</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="cart-container">
+  
+      <h2>Your Cart</h2>
+  
+      <!-- CART ITEMS WILL APPEAR HERE -->
+      <div id="cart-items"></div>
+  
+      <!-- TOTAL PRICE -->
+      <div class="total-box">
+        <h3>Total:</h3>
+        <h3 id="total-price">₦0</h3>
+      </div>
+  
+      <!-- CHECKOUT BUTTON -->
+      <button class="checkout-btn" id="checkout-btn">Checkout</button>
+  
+    </div>
+  
+    
+  <footer>
+    <p>© 2025 SmartMart. All rights reserved.</p>
+
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+    </body>
+    </html>

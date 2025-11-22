@@ -1,0 +1,232 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0f0ff;
+  color: #333;
+}
+
+.header {
+  background: #0055a5; /* semi-transparent */
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #ffcc00;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff6600;
+}
+
+/* Main content */
+.cart-container {
+  max-width: 900px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+
+.cart-container h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+    color: #152121;
+    text-align: center;
+  }
+  
+  /* Cart items */
+  #cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Each cart product */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .cart-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .cart-item-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #004466;
+  }
+  
+  .cart-item-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Cart summary */
+  .cart-summary {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #152121;
+  }
+  
+  #checkout-btn {
+    margin-top: 15px;
+    background: #ffcc00;
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkout-btn:hover {
+    background-color: #e65500;
+  }
+  
+  /* Responsive menu for smaller screens */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      background: #004aad;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 80%;
+      transform: translateX(100%);
+          opacity: 0;
+          transition: 0.3s ease;
+          pointer-events: none;
+          padding: 20px;
+          border-radius: 0 0 0 10px;
+        }
+      
+        #menu-toggle:checked + .menu-icon + .nav-links {
+          transform: translateX(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+      
+        .nav-links li {
+          text-align: center;
+          padding: 10px 0;
+        }
+      
+        .cart-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      
+        .cart-item img {
+          margin-bottom: 10px;
+        }
+      
+        .cart-summary {
+          text-align: center;
+        }
+      }
+      
+      /* Footer */
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 400px;
+      }
+
+/* Quantity Buttons */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  padding: 5px 10px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background: #0065d1;
+}
+
+.quantity-number {
+  font-size: 18px;
+  font-weight: bold;
+}

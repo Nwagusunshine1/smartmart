@@ -1,0 +1,176 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0f0ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+.header {
+  background: #0055a5;
+  padding: 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #ffcc00;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #004aad;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+
+#menu-toggle{
+    display: none;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.about-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 100;
+  color: green;
+}
+
+.about-hero {
+  background-color: #e0f0ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+.about-content {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-content h2 {
+  margin-top: 25px;
+  color: #0055a5;
+}
+
+.about-content p, .about-content ul {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.about-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-content ul li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.menu-icon {
+  display: flex;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <link rel="icon" type="image/pgn" href="./smartmart.png">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f8f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .success-box {
+      background: white;
+      padding: 30px;
+      width: 90%;
+      max-width: 450px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .checkmark {
+      font-size: 70px;
+      color: #28a745;
+      animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h2 {
+      color: #28a745;
+      margin-top: 10px;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background: #28a745;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="success-box">
+    <div class="checkmark">✔</div>
+
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your purchase. Your order has been confirmed.</p>
+
+    <a href="index.html" class="btn">Continue Shopping</a>
+  </div>
+
+  <script>
+    // Clear cart after payment
+    localStorage.removeItem("cart");
+  </script>
+
+</body>
+</html>
